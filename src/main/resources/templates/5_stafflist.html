@@ -1,0 +1,24 @@
+<!--
+Jef Keppens
+r0885867
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Staff list</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css">
+</head>
+<body>
+    <div class="contain">
+        <div class="header">
+            <h1>Our staff:</h1>
+        </div>
+        <ul class="list">
+            <li th:each="staffmember: ${staffarray}"
+                th:text="${staffmember.toString()}"></li>
+        </ul>
+        <p><a href="/">Back to home page</a></p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!--
+Jef Keppens
+r0885867
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Animal world list</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css">
+</head>
+<body>
+<div class="contain">
+    <div class="header">
+        <h1 th:text="'Animal worlds of ' + ${zoo.getName()}"></h1>
+    </div>
+    <ol class="list">
+        <div th:each="animalworld: ${zoo.getAnimalWorlds()}">
+            <li>
+                <p th:text="${animalworld.getName()} + ' - responsible: ' + ${animalworld.getResponsible().getFirstName()} + ' ' + ${animalworld.getResponsible().getSurName()}"></p>
+                <p th:text=" 'Number of animals: ' + ${animalworld.getNumberOfAnimals()}"></p>
+                <p><img onerror="this.src='img/noimage.jpg'" th:src="@{${animalworld.getPhoto()}}"/></p>
+            </li>
+        </div>
+    </ol>
+    <p><a href="/">Back to home page</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,153 @@
+/*add a self-selected stylesheet here*/
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.contain {
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px black;
+    background-color: lightyellow;
+    overflow: hidden;
+}
+
+.header {
+    background-color: steelblue;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Arvo', serif;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: white;
+}
+
+h4 {
+    font-family: 'Permanent Marker', cursive;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.list {
+    text-align: left;
+    margin: 20px;
+}
+
+.list li {
+    margin: 5px;
+}
+
+.li_circle {
+    margin-left: 20px;
+    list-style-type: circle;
+}
+
+.li_square {
+    margin-left: 35px;
+    list-style-type: square;
+}
+
+ul li, ol li {
+    font-size: 1.2rem;
+}
+
+.radio {
+    text-align: left;
+    width: 100%;
+}
+
+a {
+    font-family: 'Rokkitt', serif;
+    padding: 7px;
+    font-size: 1.2rem;
+    text-decoration: none !important;
+    color: darkblue !important;
+    border: 1px solid darkblue;
+    background-color: lightblue;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color ease-in-out 300ms, color ease-in-out 300ms;
+    margin-top: 10px;
+}
+
+a:hover {
+    background-color: darkblue;
+    color: lightblue !important;
+}
+
+p {
+    margin: 30px;
+}
+
+input {
+    width: 100px;
+}
+
+form {
+    padding: 30px;
+}
+
+.submit {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    transition: color ease-in-out 300ms, background-color ease-in-out 300ms;
+    border-radius: 15px;
+}
+
+.submit:hover {
+    color: white;
+    background-color: dimgrey;
+}
+
+.message {
+    font-family: 'Rokkitt', serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.animalworldlist {
+    list-style-type: none !important;
+    margin-bottom: 20px !important;
+}
+
+.animalworldlist a {
+    background-color: white;
+    border-color: blue;
+    color: blue !important;
+}
+
+.animalworldlist a:hover {
+    background-color: blue;
+    color: white !important;
+}
+
+.form-control-sm {
+    height: calc(1.5em + .5rem + 2px) !important;
+    padding: .25rem .5rem !important;
+    font-size: .875rem !important;
+    line-height: 1.5 !important;
+    border-radius: .2rem !important;
+}

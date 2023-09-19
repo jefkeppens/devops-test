@@ -1,0 +1,56 @@
+<!--
+Jef Keppens
+r0885867
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>add new animal world</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+<div class="contain">
+    <div class="header">
+        <h1 class="mt-2 text-light">New animal world</h1>
+    </div>
+    <form action="10_animalworldlist">
+        <p class="form-floating mx-auto">
+            <input class="form-control" type="text" id="animalworldName" name="animalworldName" placeholder="Name animal world:">
+            <label for="animalworldName">Name animal world:</label>
+        </p>
+        <p class="form-floating mx-auto">
+            <input class="form-control" type="text" id="animalworldNumber" name="animalworldNumber" placeholder="Number of animals:">
+            <label for="animalworldNumber">Number of animals:</label>
+        </p>
+        <p class="form-floating mx-auto">
+            <input class="form-control" type="text" id="photo" name="photo" placeholder="Photo:">
+            <label for="photo">Photo:</label>
+        </p>
+        <p>
+            <select name="zooName" class="form-select">
+                <option value="-1">In which zoo?</option>
+                <option th:each="zoo: ${zoolist}"
+                        th:text="${zoo.getName()}"
+                        th:value="${zooStat.index}"></option>
+            </select>
+        </p>
+        <p>
+            <select name="staffName" class="form-select">
+                <option value="-1">Who is responsible for this animal world?</option>
+                <option th:each="staff: ${stafflist}"
+                        th:text="${staff.getFirstName()} + ' ' + ${staff.getSurName()}"
+                        th:value="${staffStat.index}"></option>
+            </select>
+        </p>
+        <p>
+            <input class="submit" type="submit" name="submit" value="Confirm animal world">
+        </p>
+        <p>
+            <a href="/">Back to home page</a>
+        </p>
+    </form>
+</div>
+</body>
+</html>

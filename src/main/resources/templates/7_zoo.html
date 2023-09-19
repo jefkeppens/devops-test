@@ -1,0 +1,30 @@
+<!--
+Jef Keppens
+r0885867
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Add zoo</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<body>
+    <div class="contain">
+        <div class="header">
+            <h1 class="mt-2 text-light">Add zoo</h1>
+        </div>
+        <form action="8_zoolist">
+            <p class="form-floating mx-auto">
+                <input class="form-control" type="text" id="zoo" name="zoo" placeholder="Name zoo">
+                <label for="zoo">Name zoo</label>
+            </p>
+            <p>
+                <input class="submit" type="submit" name="submit" value="Confirm zoo">
+            </p>
+        </form>
+        <p><a href="/">Back to home page</a></p>
+    </div>
+</body>
+</html>

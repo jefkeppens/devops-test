@@ -1,0 +1,22 @@
+<!--
+Jef Keppens
+r0885867
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>animal world</title>
+    <link rel="stylesheet" type="text/css" href="img/style.css">
+</head>
+<body>
+    <div class="contain">
+        <div class="header mb-3">
+            <h1 th:text="'We found this animal world: ' + ${animalworld.getName()}"></h1>
+        </div>
+        <p th:text="'Responsible: ' + ${animalworld.getResponsible().getFirstName()} + ' ' + ${animalworld.getResponsible().getSurName()}"></p>
+        <img onerror="this.src='img/noimage.jpg'" th:src="@{${animalworld.getPhoto()}}"/>
+        <p><a href="/">Back to home page</a></p>
+    </div>
+</body>
+</html>
